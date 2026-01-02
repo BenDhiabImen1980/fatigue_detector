@@ -1,0 +1,18 @@
+# FastAPI et serveur
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+python-multipart==0.0.12
+
+# ML - VERSIONS CPU (3x plus léger !)
+#tensorflow-cpu==2.1.0
+numpy==1.24.3
+opencv-python-headless==4.8.1.78
+
+# Traitement d'images
+Pillow==10.4.0
+
+# Validation
+pydantic==2.9.2
+
+# Utils
+requests==2.32.3

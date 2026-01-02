@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+venv/
+
+# Data
+Data/
+ML_folw_runs/
+
+# Modèles
+Model/
+*.h5
+
+# Logs
+*.log
+
+# OS / IDE
+.DS_Store
+.vscode/
+*.code-workspace
+
+# Secrets
+*.secret
+*.key
+*.pem
+credentials*.json
+azure-credentials.json
+
+# Autres fichiers générés
+confusion_matrix.png
+feature_importance.png
+resultat.txt
+
+# Secrets (NE JAMAIS commiter)
+*.secret
+*.key
+*.pem
+credentials*.json
+resultat.txt
+azure-credentials.json
