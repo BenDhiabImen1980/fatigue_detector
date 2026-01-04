@@ -64,14 +64,14 @@ jobs:
           
           # ----------------------
           # CHANGÉ : Build pour Docker Hub au lieu de ACR
-          docker build -t username/${{ env.IMAGE_NAME }}:${{ github.sha }} .
+          docker build -t bendhiab/${{ env.IMAGE_NAME }}:${{ github.sha }} .
           
           # Tag la même image comme 'latest'
-          docker tag username/${{ env.IMAGE_NAME }}:${{ github.sha }} username/${{ env.IMAGE_NAME }}:latest
+          docker tag bendhiab/${{ env.IMAGE_NAME }}:${{ github.sha }} bendhiab/${{ env.IMAGE_NAME }}:latest
           
           echo "🚀 Pousser les images sur Docker Hub..."
-          docker push username/${{ env.IMAGE_NAME }}:${{ github.sha }}
-          docker push username/${{ env.IMAGE_NAME }}:latest
+          docker push bendhiab/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker push bendhiab/${{ env.IMAGE_NAME }}:latest
           # ----------------------
           
           echo "✅ Images Docker pushées avec succès"
@@ -85,7 +85,7 @@ jobs:
             az containerapp update \
               --name ${{ env.CONTAINER_APP_NAME }} \
               --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
-              --image username/${{ env.IMAGE_NAME }}:${{ github.sha }}
+              --image bendhiab/${{ env.IMAGE_NAME }}:${{ github.sha }}
             # ----------------------
       
       - name: Verify deployment
