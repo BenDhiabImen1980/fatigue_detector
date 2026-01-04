@@ -1,4 +1,5 @@
-# tests/test_api.py
+import sys
+import os
 import io
 import numpy as np
 from fastapi.testclient import TestClient
@@ -6,12 +7,11 @@ from unittest.mock import patch, MagicMock
 from PIL import Image
 
 # Mock TensorFlow AVANT l'import de App.main
-sys.modules['tensorflow'] = Mock()
-sys.modules['tensorflow.keras'] = Mock()
-sys.modules['tensorflow.keras.models'] = Mock()
-sys.modules['tensorflow.keras.preprocessing'] = Mock()
-sys.modules['tensorflow.keras.preprocessing.image'] = Mock()
-
+sys.modules['tensorflow'] = MagicMock()
+sys.modules['tensorflow.keras'] = MagicMock()
+sys.modules['tensorflow.keras.models'] = MagicMock()
+sys.modules['tensorflow.keras.preprocessing'] = MagicMock()
+sys.modules['tensorflow.keras.preprocessing.image'] = MagicMock()
 
 from App.main import app
 
