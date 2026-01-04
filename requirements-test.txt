@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+Pillow
+numpy==1.24.3
+pytest
+pytest-cov
+httpx

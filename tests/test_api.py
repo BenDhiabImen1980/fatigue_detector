@@ -5,6 +5,14 @@ from fastapi.testclient import TestClient
 from unittest.mock import patch, MagicMock
 from PIL import Image
 
+# Mock TensorFlow AVANT l'import de App.main
+sys.modules['tensorflow'] = Mock()
+sys.modules['tensorflow.keras'] = Mock()
+sys.modules['tensorflow.keras.models'] = Mock()
+sys.modules['tensorflow.keras.preprocessing'] = Mock()
+sys.modules['tensorflow.keras.preprocessing.image'] = Mock()
+
+
 from App.main import app
 
 client = TestClient(app)
